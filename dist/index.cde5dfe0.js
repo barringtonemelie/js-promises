@@ -560,7 +560,30 @@ function hmrAccept(bundle, id) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
-console.log("Hello World!");
+const bg = document.getElementById("bg-image");
+const creditWidget = document.querySelector(".credit-widget");
+const unsplashApi = ()=>{
+    (0, _axiosDefault.default)("https://api.unsplash.com/photos/random/?client_id=CoDpo4M3ZKCnjLQDnieglH4aQMMoHBDG31eGuqJ4WMQ").then((response)=>{
+        console.log(response);
+        bg.style.backgroundImage = `url(${response.data.urls.small})`; //Hur gör jag bilden till lämplig storlek? 
+    }).catch((error)=>{
+        console.log(error);
+    });
+};
+// unsplashApi(); 
+//Credit adress: response.data.user.name + länken till deras sida 
+function success(pos) {
+    const crd = pos.coords;
+    console.log("Your current position is:");
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+//Använd axios för att anropa weather api. 
+}
+function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+navigator.geolocation.getCurrentPosition(success, error);
 
 },{"axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jo6P5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
