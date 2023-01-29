@@ -7,7 +7,7 @@ const unsplashApi = () => {
     axios("https://api.unsplash.com/photos/random/?client_id=CoDpo4M3ZKCnjLQDnieglH4aQMMoHBDG31eGuqJ4WMQ")
     .then(response => {
         console.log(response); 
-        bg.style.backgroundImage = `url(${response.data.urls.small})`; //Hur gör jag bilden till lämplig storlek? 
+        bg.style.background = `center / cover no-repeat url(${response.data.urls.regular})`; 
     })
     .catch(error => {
         console.log(error); 
@@ -29,10 +29,10 @@ function success(pos) {
     console.log(`More or less ${crd.accuracy} meters.`);
 
     //Använd axios för att anropa weather api. 
-  }
+}
   
-  function error(err) {
+function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
+}
   
-  navigator.geolocation.getCurrentPosition(success, error);
+navigator.geolocation.getCurrentPosition(success, error);

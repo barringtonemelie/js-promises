@@ -7,6 +7,39 @@
   width: 100vw;
   height: 100vh;
   background-color: #5f9ea0;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "top-left top top-right"
+                       "mid-left mid mid-right"
+                       "botm-left botm botm-right";
+  display: grid;
+}
+
+.widget {
+  height: 15rem;
+  width: 90%;
+  border: 1px solid #fff;
+  margin: 1.5rem auto;
+}
+
+.api-widget-one {
+  grid-area: top-left;
+}
+
+.weather-widget {
+  grid-area: top-right;
+}
+
+.time-widget {
+  grid-area: mid;
+}
+
+.credit-widget {
+  grid-area: botm-left;
+}
+
+.api-widget-two {
+  grid-area: botm-right;
 }
 
 /*# sourceMappingURL=index.2687eea0.css.map */

@@ -565,7 +565,7 @@ const creditWidget = document.querySelector(".credit-widget");
 const unsplashApi = ()=>{
     (0, _axiosDefault.default)("https://api.unsplash.com/photos/random/?client_id=CoDpo4M3ZKCnjLQDnieglH4aQMMoHBDG31eGuqJ4WMQ").then((response)=>{
         console.log(response);
-        bg.style.backgroundImage = `url(${response.data.urls.small})`; //Hur gör jag bilden till lämplig storlek? 
+        bg.style.background = `center / cover no-repeat url(${response.data.urls.regular})`;
     }).catch((error)=>{
         console.log(error);
     });
