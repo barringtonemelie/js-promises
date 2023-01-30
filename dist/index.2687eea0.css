@@ -16,10 +16,24 @@
 }
 
 .widget {
-  height: 15rem;
+  height: 100%;
   width: 90%;
+  color: #fff;
   border: 1px solid #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1.5rem auto;
+  font-family: monospace;
+  display: flex;
+}
+
+.widget > h2 {
+  font-size: 2rem;
+}
+
+.widget > h3 {
+  font-size: 1.5rem;
 }
 
 .api-widget-one {

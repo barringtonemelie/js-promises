@@ -18,9 +18,23 @@
 
 .widget {
     border: 1px solid white; 
-    height: 15rem; 
+    height: 100%; 
     width: 90%;
     margin: 1.5rem auto;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white; 
+    font-family: monospace;
+}
+
+.widget > h2 {
+    font-size: 2rem;
+}
+
+.widget > h3 {
+    font-size: 1.5rem;
 }
 
 .api-widget-one {
