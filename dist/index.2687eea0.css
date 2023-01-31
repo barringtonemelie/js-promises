@@ -6,7 +6,6 @@
 #bg-image {
   width: 100vw;
   height: 100vh;
-  background-color: #5f9ea0;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "top-left top top-right"
@@ -16,10 +15,10 @@
 }
 
 .widget {
-  height: 100%;
+  height: 90%;
   width: 90%;
   color: #fff;
-  border: 1px solid #fff;
+  background-color: #000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -29,15 +28,30 @@
 }
 
 .widget > h2 {
+  margin: .5rem;
   font-size: 2rem;
 }
 
 .widget > h3 {
+  margin: 1rem;
+  padding: 1rem;
   font-size: 1.5rem;
+}
+
+.widget > h4 {
+  font-size: 1rem;
+}
+
+.widget > p {
+  padding: 1rem;
 }
 
 .api-widget-one {
   grid-area: top-left;
+}
+
+.kanye-quote {
+  font-size: 1.2rem;
 }
 
 .weather-widget {
@@ -50,6 +64,10 @@
 
 .credit-widget {
   grid-area: botm-left;
+}
+
+.credit-link {
+  color: #fff;
 }
 
 .api-widget-two {
